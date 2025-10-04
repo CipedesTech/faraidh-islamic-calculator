@@ -1,0 +1,16 @@
+# Abaikan dependensi lokal
+node_modules
+
+# Abaikan log dan file sementara
+npm-debug.log
+yarn-error.log
+
+# Abaikan folder output build (karena akan dibuat di dalam container)
+dist
+
+# Abaikan file sistem operasi dan editor
+.DS_Store
+.vscode
+
+# Abaikan folder Git
+.git
