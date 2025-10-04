@@ -1,0 +1,16 @@
+services:
+  faraidh-app:
+    container_name: faraidh-calculator-app
+    # Build image dari folder 'frontend' tempat Dockerfile berada
+    build: ./frontend
+    restart: unless-stopped
+    expose:
+      - "80" # Port internal Nginx di dalam container
+    networks:
+      # Terhubung ke network eksternal yang dibuat oleh proxy-manager
+      - web-proxy
+
+networks:
+  web-proxy:
+    # Deklarasikan bahwa network ini sudah ada (eksternal)
+    external: true
